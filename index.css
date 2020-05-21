@@ -1,3 +1,4 @@
+/** @format */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -119,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -135,25 +136,19 @@ html body {
   font-size: 62.5%;
   height: 100%;
 }
-.container {
-  font-family: "oswald", sans-serif;
-  margin-bottom: 15px;
-}
-h2,
-h3,
-h4,
-h5 {
+.container h2,
+.container h3 {
   font-size: 1.6rem;
 }
-p {
-  font-size: 1.4rem;
+.container p {
+  font-size: 1.2rem;
 }
-header h1 {
+.container header h1 {
   font-size: 2rem;
 }
-header nav {
+.container header nav {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   background-color: teal;
   color: white;
   padding: 2%;
@@ -162,42 +157,35 @@ header nav {
   align-items: center;
   margin: 2%;
 }
-header nav a {
+.container header nav a {
   color: white;
   text-decoration: none;
 }
-header nav a:hover {
+.container header nav a:hover {
   color: gold;
   text-decoration: none;
 }
-@media (max-width: 500px) {
-  header nav {
-    background: red;
-  }
-}
-header .top-content {
+.container .top-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 2%;
 }
-header .top-content .top1 {
+.container .top-content .top1 {
   display: flex column;
   justify-content: space-between;
-  align-items: center;
   margin: 2%;
 }
-header .top-content img {
+.container .top-content img {
   width: 25%;
 }
-header .middle-content {
-  border: 2px black;
+.container .middle-content {
   display: flex;
   justify-content: space-around;
   margin: 2%;
 }
-header footer {
+.container footer nav {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   background-color: teal;
   color: white;
   padding: 2%;
@@ -206,11 +194,11 @@ header footer {
   align-items: center;
   margin: 2%;
 }
-header footer a {
+.container footer nav a {
   color: white;
   text-decoration: none;
 }
-header footer a:hover {
+.container footer nav a:hover {
   color: gold;
   text-decoration: none;
 }
