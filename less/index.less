@@ -94,6 +94,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -108,17 +109,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -126,6 +131,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -155,74 +161,100 @@ html body {
   align-items: center;
   margin: 2%;
 }
+
 .flex2() {
   display: flex column;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   margin: 2%;
 }
+
 .hover() {
   color: @secondary-color;
   text-decoration: none;
 }
+
 .container {
+
   h2,
   h3 {
     font-size: 1.6rem;
   }
+
   p {
     font-size: @font-size;
   }
+
   header {
     h1 {
       font-size: 2rem;
     }
+
     nav {
+      @media (max-width: 500px) {
+        .flex2();
+      }
+
       text-decoration: none;
       font-size: @font-size;
       background-color: @main-color;
       color: @text-color;
       padding: 2%;
       .flex();
+
       a {
         color: @text-color;
         text-decoration: none;
       }
+
       a:hover {
         .hover();
       }
     }
   }
+
   .top-content {
+    @media (max-width: 500px) {
+      .flex2();
+    }
+
     display: flex;
     justify-content: space-evenly;
     margin: 2%;
+
     .top1 {
       .flex2();
     }
+
     img {
       width: 25%;
+      display: flex;
+      justify-content: space-around;
+      margin: 2%;
     }
-  }
-  .middle-content {
-    display: flex;
-    justify-content: space-around;
-    margin: 2%;
-  }
-  footer {
-    nav {
-      text-decoration: none;
-      font-size: @font-size;
-      background-color: @main-color;
-      color: @text-color;
-      padding: 2%;
-      .flex();
-      a {
-        color: @text-color;
+
+    footer {
+      nav {
+        @media (max-width: 500px) {
+          .flex2();
+        }
+
         text-decoration: none;
-      }
-      a:hover {
-        .hover();
+        font-size: @font-size;
+        background-color: @main-color;
+        color: @text-color;
+        padding: 2%;
+        .flex();
+
+        a {
+          color: @text-color;
+          text-decoration: none;
+        }
+
+        a:hover {
+          .hover();
+        }
       }
     }
   }
-}
